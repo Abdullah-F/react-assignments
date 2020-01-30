@@ -12,6 +12,10 @@ const persons = (state= initialState, action)=>{
         
         return { persons: state.persons.concat(newPerson)};
     }
+
+    if(action.type === 'DELETE_PERSON'){
+        return { persons: state.persons.filter(person => person.id !== action.personId)}
+    }
     return state;
 }
 
