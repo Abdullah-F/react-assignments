@@ -1,12 +1,10 @@
-import * as actionTypes from '../actions'
+import * as actionTypes from '../actions/actions'
 
 const intialState = {
     counter: 0,
 }
 
 const counter = (state = intialState, action) => {
-    console.log('counter', action);
-
     switch (action.type) {
         case (actionTypes.INC_COUNTER):
             return {

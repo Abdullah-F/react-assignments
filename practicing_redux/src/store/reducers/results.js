@@ -1,12 +1,10 @@
-import * as actionTypes from '../actions'
+import * as actionTypes from '../actions/actions'
 
 const intialState = {
     results: [],
 }
 
 const results = (state = intialState, action) => {
-    console.log('results', action);
-
     switch (action.type) {
         case (actionTypes.STORE_RESULT):
             return {
