@@ -27,6 +27,13 @@ module.exports =  {
                 test:/\.css$/,
                 exclude:/node_modules/,
                 use:[
+                    /*
+                    order is important when it comes to css loaders
+                    the first one must be style loader,
+                    then css loader,
+                    then postcss loader
+                    */
+                    {loader: "style-loader"},
                      {
                          loader: "css-loader",
                          options:{
@@ -36,7 +43,6 @@ module.exports =  {
                              }
                          }
                     },
-                     {loader: "style-loader"},
                      {
                         loader: "postcss-loader",
                         options:{
